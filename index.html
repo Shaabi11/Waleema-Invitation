@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation - Mohammad Shabi Khan & Areesha Bano</title>
+
+  <!-- WhatsApp & Social Media Preview Meta Tags -->
+  <meta property="og:title" content="Daawat-e-Walima: Mohammad Shabi Khan & Areesha Bano">
+  <meta property="og:description" content="Thursday, November 12, 2026 • Shubham Udyaan, Azamgarh. Click to view the full invitation & RSVP.">
+  <meta property="og:image" content="https://freesvg.org/img/Gold-Bismillah-2-No-Background.png">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Gold Floating Particles Background -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <div class="card">
+    <!-- Corner Decorative Accents -->
+    <div class="corner top-left"></div>
+    <div class="corner top-right"></div>
+    <div class="corner bottom-left"></div>
+    <div class="corner bottom-right"></div>
+
+    <!-- Authentic Calligraphic Bismillah Image -->
+    <div class="bismillah-wrapper">
+      <img src="https://freesvg.org/img/Gold-Bismillah-2-No-Background.png" alt="Bismillah Calligraphy" class="bismillah-img">
+    </div>
+
+    <!-- Gold Arch Ornament -->
+    <div class="gold-divider">
+      <span>❖</span>
+    </div>
+
+    <h1 class="event-type">Daawat-e-Walima</h1>
+    <h2><div class="couple-names">
+  <span class="groom-name">Mohammad Shabi Khan</span>
+  <span class="ampersand">&</span>
+  <span class="bride-name">Areesha Bano</span>
+</div></h2>
+    
+    <p class="date">Thursday, November 12, 2026</p>
+    <p class="time">Dinner at 6:00 PM</p>
+
+    <!-- Add to Calendar Button -->
+    <div class="calendar-btn-wrapper">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Daawat-e-Walima:+Mohammad+Shabi+Khan+%26+Areesha+Bano&dates=20261112T123000Z/20261112T173000Z&details=Join+us+for+Daawat-e-Walima+at+Shubham+Udyaan.&location=Shubham+Udyaan,+Opposite+ITI,+Azamgarh,+Uttar+Pradesh" target="_blank" class="calendar-btn">
+        📅 Add to Google Calendar
+      </a>
+    </div>
+    
+    <!-- Venue & Map Button -->
+    <div class="venue-container">
+      <p class="section-label">Venue</p>
+      <p class="venue-title">Shubham Udyaan</p>
+      <p class="venue-address">Opposite ITI, Azamgarh, Uttar Pradesh</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Shubham+Udyaan+Azamgarh&query_place_id=ChIJA4D6szujkTkRnjpgiL5VbQA" target="_blank" class="map-btn">
+        📍 View Location on Map
+      </a>
+    </div>
+
+    <!-- Countdown Display -->
+    <div id="timer">
+      <div><span id="days">00</span><label>Days</label></div>
+      <div><span id="hours">00</span><label>Hours</label></div>
+      <div><span id="minutes">00</span><label>Mins</label></div>
+      <div><span id="seconds">00</span><label>Secs</label></div>
+    </div>
+
+    <!-- Gold Divider -->
+    <div class="gold-divider" style="margin-top: 30px;">
+      <span>❖</span>
+    </div>
+
+    <!-- Host Information Section -->
+    <div class="host-section">
+      <div class="host-block">
+        <p class="host-label">Cordially Invited By</p>
+        <p class="host-names">Mrs. & Mr. Abu Asim</p>
+        
+        <!-- Residence Address nested directly under Host -->
+        <div class="residence-container">
+          <p class="residence-label">Residence</p>
+          <p class="residence-address">[Vill - Nonari, Azamgarh]</p>
+        </div>
+      </div>
+
+      <div class="host-block" style="margin-top: 20px;">
+        <p class="host-label">With Compliments From</p>
+        <p class="host-names">All Relatives & Friends</p>
+      </div>
+    </div>
+
+    <!-- Gold Divider -->
+    <div class="gold-divider" style="margin-top: 25px;">
+      <span>❖</span>
+    </div>
+
+    <!-- RSVP Section -->
+    <div class="rsvp-section">
+      <h3 class="rsvp-title">RSVP & Confirmation</h3>
+      <p class="rsvp-subtitle">Please let us know if you will be joining us</p>
+
+      <form id="rsvp-form">
+        <div class="input-group">
+          <input type="text" id="guest-name" placeholder="Your Full Name" required>
+        </div>
+        <div class="input-group">
+          <select id="attendance-status" required>
+            <option value="" disabled selected>Will you attend?</option>
+            <option value="Joyfully Accepts">Joyfully Accepts</option>
+            <option value="Will Try My Best (Sending Blessings & Best Wishes Always)">Will Try My Best (Sending Blessings & Best Wishes Always)</option>
+          </select>
+        </div>
+        <button type="submit" class="rsvp-submit-btn">Confirm RSVP</button>
+      </form>
+      <div id="rsvp-confirmation" class="hidden">
+        ✨ Thank you! Your response has been recorded.
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

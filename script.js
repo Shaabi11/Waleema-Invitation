@@ -79,7 +79,7 @@ if (canvas) {
 
 
 // Google Apps Script Web App Endpoint
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbywRwQIpTCbR0EFz_wuTHPhAJlY7jJfVIDsJKfEKXkdICEVSZWE1Q1uIImHjrNI5rH0gg/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwG00bzu3xKUePVw54v3xULRRm_HlNAPUWLG3DfstLajDfvNPpSYQhqeWZub36BDyiEfg/exec";
 
 // Dynamic RSVP Handler - Transmits to Sheet & Shows Confirmation
 const rsvpForm = document.getElementById('rsvp-form');

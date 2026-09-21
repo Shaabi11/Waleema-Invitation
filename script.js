@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ==========================================
   // 1. COUNTDOWN TIMER LOGIC
   // ==========================================
-  const eventDate = new Date("November 12, 2026 00:00:00").getTime();
+  const eventDate = new Date("November 13, 2026 18:00:00").getTime();
 
   const timerInterval = setInterval(function () {
     const now = new Date().getTime();

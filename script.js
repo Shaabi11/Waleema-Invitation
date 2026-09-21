@@ -1,6 +1,37 @@
-// Google Apps Script Web App Endpoint
+// 1. Countdown Timer Logic
+const eventDate = new Date("November 12, 2026 00:00:00").getTime();
+
+const timerInterval = setInterval(function () {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
+
+  if (daysEl) daysEl.innerText = days < 10 ? '0' + days : days;
+  if (hoursEl) hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+  if (minutesEl) minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+  if (secondsEl) secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+
+  if (distance < 0) {
+    clearInterval(timerInterval);
+    const countdownEl = document.getElementById("countdown");
+    if (countdownEl) countdownEl.innerHTML = "The Event Has Begun!";
+  }
+}, 1000);
+
+
+// 2. Google Apps Script RSVP Endpoint
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbywRwQIpTCbR0EFz_wuTHPhAJlY7jJfVIDsJKfEKXkdICEVSZWE1Q1uIImHjrNI5rH0gg/exec";
 
+// 3. RSVP Form Handling Logic
 document.getElementById('rsvp-form').addEventListener('submit', function (e) {
   e.preventDefault();
 

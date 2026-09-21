@@ -1,5 +1,5 @@
-// Target Date: November 12, 2026, 18:00:00 (Dinner Time)
-const targetDate = new Date('November 12, 2026 18:00:00').getTime();
+// Target Date: November 13, 2026, 18:00:00 (Dinner Time)
+const targetDate = new Date('November 13, 2026 18:00:00').getTime();
 
 // Countdown Timer Functionality
 function updateTimer() {

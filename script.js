@@ -1,4 +1,4 @@
-// Target Date: November 13, 2026, 18:00:00 (Dinner Time)
+// Target Date: November 12, 2026, 18:00:00 (Dinner Time)
 const targetDate = new Date('November 12, 2026 18:00:00').getTime();
 
 // Countdown Timer Functionality
@@ -78,7 +78,10 @@ if (canvas) {
 }
 
 
-// Dynamic RSVP Handler - Hides Form & Button on Submission
+// Google Apps Script Web App Endpoint
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbywRwQIpTCbR0EFz_wuTHPhAJlY7jJfVIDsJKfEKXkdICEVSZWE1Q1uIImHjrNI5rH0gg/exec";
+
+// Dynamic RSVP Handler - Transmits to Sheet & Shows Confirmation
 const rsvpForm = document.getElementById('rsvp-form');
 const confirmationDiv = document.getElementById('rsvp-confirmation');
 
@@ -88,6 +91,19 @@ if (rsvpForm) {
     
     const guestName = document.getElementById('guest-name').value.trim();
     const attendanceStatus = document.getElementById('attendance-status').value;
+
+    if (!guestName || !attendanceStatus) return;
+
+    // Send Data to Google Sheet
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: guestName,
+        status: attendanceStatus
+      })
+    });
 
     let responseMessage = "";
 
